@@ -11,6 +11,11 @@
 		2ECAEBCD2C070C210049BC6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEBCC2C070C210049BC6C /* ContentView.swift */; };
 		2ECAEBCF2C070C2E0049BC6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAEBCE2C070C2E0049BC6C /* Assets.xcassets */; };
 		2ECAEBD22C070C2E0049BC6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAEBD12C070C2E0049BC6C /* Preview Assets.xcassets */; };
+		2ECAEBDA2C070D080049BC6C /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 2ECAEBD92C070D080049BC6C /* GoogleGenerativeAI */; };
+		2ECAEBDC2C070D250049BC6C /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEBDB2C070D250049BC6C /* YOLOv3Tiny.mlmodel */; };
+		2ECAEBDF2C0734580049BC6C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEBDE2C0734580049BC6C /* APIKey.swift */; };
+		2ECAEBE12C0734900049BC6C /* GenerativeAI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAEBE02C0734900049BC6C /* GenerativeAI.plist */; };
+		2ECAEBE62C081C870049BC6C /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEBE52C081C870049BC6C /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,10 @@
 		2ECAEBCC2C070C210049BC6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2ECAEBCE2C070C2E0049BC6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ECAEBD12C070C2E0049BC6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2ECAEBDB2C070D250049BC6C /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
+		2ECAEBDE2C0734580049BC6C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		2ECAEBE02C0734900049BC6C /* GenerativeAI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GenerativeAI.plist; sourceTree = "<group>"; };
+		2ECAEBE52C081C870049BC6C /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ECAEBDA2C070D080049BC6C /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +61,11 @@
 		2ECAEBC92C070C210049BC6C /* RecipeAI */ = {
 			isa = PBXGroup;
 			children = (
+				2ECAEBDB2C070D250049BC6C /* YOLOv3Tiny.mlmodel */,
 				2ECAEBCA2C070C210049BC6C /* RecipeAIApp.swift */,
-				2ECAEBCC2C070C210049BC6C /* ContentView.swift */,
+				2ECAEBE42C08199D0049BC6C /* Views */,
+				2ECAEBE22C0819800049BC6C /* Utils */,
+				2ECAEBDD2C0734440049BC6C /* Services */,
 				2ECAEBCE2C070C2E0049BC6C /* Assets.xcassets */,
 				2ECAEBD02C070C2E0049BC6C /* Preview Content */,
 			);
@@ -65,6 +78,31 @@
 				2ECAEBD12C070C2E0049BC6C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2ECAEBDD2C0734440049BC6C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAEBE02C0734900049BC6C /* GenerativeAI.plist */,
+				2ECAEBDE2C0734580049BC6C /* APIKey.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2ECAEBE22C0819800049BC6C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAEBE52C081C870049BC6C /* Camera.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2ECAEBE42C08199D0049BC6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAEBCC2C070C210049BC6C /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +121,9 @@
 			dependencies = (
 			);
 			name = RecipeAI;
+			packageProductDependencies = (
+				2ECAEBD92C070D080049BC6C /* GoogleGenerativeAI */,
+			);
 			productName = RecipeAI;
 			productReference = 2ECAEBC72C070C210049BC6C /* RecipeAI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 2ECAEBBE2C070C210049BC6C;
+			packageReferences = (
+				2ECAEBD82C070D080049BC6C /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
 			productRefGroup = 2ECAEBC82C070C210049BC6C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +171,7 @@
 			files = (
 				2ECAEBD22C070C2E0049BC6C /* Preview Assets.xcassets in Resources */,
 				2ECAEBCF2C070C2E0049BC6C /* Assets.xcassets in Resources */,
+				2ECAEBE12C0734900049BC6C /* GenerativeAI.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ECAEBCD2C070C210049BC6C /* ContentView.swift in Sources */,
+				2ECAEBE62C081C870049BC6C /* Camera.swift in Sources */,
+				2ECAEBDC2C070D250049BC6C /* YOLOv3Tiny.mlmodel in Sources */,
+				2ECAEBDF2C0734580049BC6C /* APIKey.swift in Sources */,
 				2ECAEBCB2C070C210049BC6C /* RecipeAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +323,8 @@
 				DEVELOPMENT_TEAM = C59QF2W8P6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +354,8 @@
 				DEVELOPMENT_TEAM = C59QF2W8P6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2ECAEBD82C070D080049BC6C /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2ECAEBD92C070D080049BC6C /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ECAEBD82C070D080049BC6C /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2ECAEBBF2C070C210049BC6C /* Project object */;
 }
