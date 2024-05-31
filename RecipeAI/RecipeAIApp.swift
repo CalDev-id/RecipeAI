@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct RecipeAIApp: App {
+    @State private var capturedImage: UIImage? = nil
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(capturedImage: $capturedImage)
         }
     }
 }

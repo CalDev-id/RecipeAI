@@ -15,7 +15,9 @@
 		2ECAEBDC2C070D250049BC6C /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEBDB2C070D250049BC6C /* YOLOv3Tiny.mlmodel */; };
 		2ECAEBDF2C0734580049BC6C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEBDE2C0734580049BC6C /* APIKey.swift */; };
 		2ECAEBE12C0734900049BC6C /* GenerativeAI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAEBE02C0734900049BC6C /* GenerativeAI.plist */; };
-		2ECAEBE62C081C870049BC6C /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEBE52C081C870049BC6C /* Camera.swift */; };
+		2ECAEC052C083E920049BC6C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEC032C083E920049BC6C /* CameraView.swift */; };
+		2ECAEC062C083E920049BC6C /* CameraSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEC042C083E920049BC6C /* CameraSevice.swift */; };
+		2ECAEC082C083EB70049BC6C /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEC072C083EB70049BC6C /* ContentView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		2ECAEBDB2C070D250049BC6C /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		2ECAEBDE2C0734580049BC6C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		2ECAEBE02C0734900049BC6C /* GenerativeAI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GenerativeAI.plist; sourceTree = "<group>"; };
-		2ECAEBE52C081C870049BC6C /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		2ECAEC032C083E920049BC6C /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		2ECAEC042C083E920049BC6C /* CameraSevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraSevice.swift; sourceTree = "<group>"; };
+		2ECAEC072C083EB70049BC6C /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +96,8 @@
 		2ECAEBE22C0819800049BC6C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2ECAEBE52C081C870049BC6C /* Camera.swift */,
+				2ECAEC042C083E920049BC6C /* CameraSevice.swift */,
+				2ECAEC032C083E920049BC6C /* CameraView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				2ECAEBCC2C070C210049BC6C /* ContentView.swift */,
+				2ECAEC072C083EB70049BC6C /* ContentView2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,9 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ECAEBCD2C070C210049BC6C /* ContentView.swift in Sources */,
-				2ECAEBE62C081C870049BC6C /* Camera.swift in Sources */,
 				2ECAEBDC2C070D250049BC6C /* YOLOv3Tiny.mlmodel in Sources */,
+				2ECAEC052C083E920049BC6C /* CameraView.swift in Sources */,
 				2ECAEBDF2C0734580049BC6C /* APIKey.swift in Sources */,
+				2ECAEC082C083EB70049BC6C /* ContentView2.swift in Sources */,
+				2ECAEC062C083E920049BC6C /* CameraSevice.swift in Sources */,
 				2ECAEBCB2C070C210049BC6C /* RecipeAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
